@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "account"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "contracts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contract.contract"
+    }
+  }
+}

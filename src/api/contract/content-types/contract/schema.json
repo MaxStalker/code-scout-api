@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contracts",
+  "info": {
+    "singularName": "contract",
+    "pluralName": "contracts",
+    "displayName": "contract",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "text"
+    },
+    "imports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contract.contract"
+    },
+    "deployedAt": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::account.account"
+    }
+  }
+}
